@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <link rel="stylesheet" href="#">
     <meta charset="utf-8">
@@ -34,6 +35,7 @@
         <p>
           Hi I'm Tamagogani! I'm an aspiring data-scientist studying currently
           studying Computer Science at UCSD. I'm also an avid dog enthusiast!.
+          <br>
           I primarily code in python and C++ but lso know R, Matlab, and Java.
           This document is my attempt at learning HTML (I'll add CSS and
           javascript later).
@@ -53,8 +55,178 @@
           She is a 3 year old <i>Maltese Poodle</i>. Miracle is a big fan of
           food and playtime but not a big fan of costumes.
         </p>
+        <aside>
+          Miracle will <em>willingly</em> wear a costume if you give her some of her
+          favorite treats: <strong>greenies</strong>
+        </aside>
+        <picture>
+          <img src="./imgs/kekshibe.png" alt="kek shibe" style="width:auto;">
+        </picture><br>
+
+        <button onclick="showContent()">Click for a treat</button><br>
+
+        <template>
+          <h2> Butts </h2>
+        </template>
+
+        <script>
+        function showContent() {
+          var temp = document.getElementsByTagName("template")[0];
+          var clon = temp.content.cloneNode(true);
+          document.body.appendChild(clon);
+        }
+        </script>
+
+        <p> Miracle's favorite toys in order: </p>
+        <ol>
+          <li> Squirrel Squeak toy </li>
+          <li> homemade quilt ball </li>
+          <li> rubber squeak ball </li>
+        </ol>
+        <p> Miracle's Favorite Song </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/SX_ViT4Ra7k"
+        allow="clipboard-write; encrypted-media;" allowfullscreen>
+        </iframe>
+        <p> She also likes classical music </p>
+        <audio controls>
+          <source src="./mp3/Tchaikovsky_Rococo_Var_orch.mp3" type="audio/mpeg">
+          Browser does not support mp3
+        </audio>
+        <p> A survey on what you think about Miracle is greatly appreciated </p>
+        <form action="#">
+          <label for="friends">Please show Miracle your best (dog) friend</label><br>
+          <input type="file" id="friends" name="friends" accept="image/*,video/*"><br>
+
+          <label for="adjective">Please give Miracle a number (any number)</label><br>
+          <input type="number" id="adjective" name="adjective"><br>
+          <input type="range" id="thisrange" name="thisrange"><br>
+
+          <label for="good">Please check this box</label><br>
+          <input type="checkbox" id="good" name="good" checked><br>
+
+          <label for="name">你的名字</label><br>
+          <input type="text" id="name" name="name"><br>
+
+          <label for="howgood">你最喜欢 Miracle 吗？</label><br>
+          yes <input type="radio" id="howgood" name="howgood">
+          no <input type="radio" id="howgoodn" name="howgoodn"> <br><br>
+
+          <label for="bestd">Choose the best girl:</label>
+          <select name="bestd" id="bestd">
+            <optgroup label="Best Girls">
+              <option value="Miracle">Miracle</option>
+            </optgroup>
+            <optgroup label="Even Better Girls">
+              <option value="Miracles">Miracle</option>
+            </optgroup>
+          </select>
+          <br><br>
+
+          <input type="button" id="submit_button" name="submit_button"
+          value="submit">
+        </form>
+        <br><br>
+
+        <form>
+          <fieldset>
+            <legend>Book a Playdate:</legend>
+            <label for="playdate">Date</label><br>
+            <input type="date" id="playdate" name="playdate"><br>
+
+            <label for="playdate_e">Email</label><br>
+            <input type="email" id="playdate_e" name="playdate_e"><br>
+
+            <label for="playdate_t">Phone #</label><br>
+            <input type="tel" id="playdate_t" name="playdate_t"><br>
+
+            <label for="ptype">Choose playdate type:</label><br>
+            <input list="ptypes" name="ptype" id="ptype">
+            <datalist id="ptypes">
+              <option value="catch">
+              <option value="cuddles">
+              <option value="pets">
+              <option value="snack time!">
+              <option value="walkies">
+            </datalist><br>
+
+            <label for="ptime">Choose playdate length:</label><br>
+            <select id="ptime" name="ptime">
+              <option value="30">30 min</option>
+              <option value="60">60 min</option>
+              <option value="120">120 min</option>
+            </select><br><br>
+
+            <label for="playdate_text">Special Requests</label><br>
+            <textarea id="playdate_text" name="playdate_text" rows="5" cols="50">Miracle can only accept Greenies</textarea><br><br>
+
+            <input type="button" id="submit_button1" name="submit_button1"
+            value="submit">
+          </fieldset>
+        </form>
+
+        <table>
+          <caption> Miracle's time table</caption>
+            <colgroup>
+              <col span="2">
+            </colgroup>
+            <tr>
+              <th>Time of day</th>
+              <th>Event</th>
+            </tr>
+            <tr>
+              <td>Morning</td>
+              <td>Playtime</td>
+            </tr>
+            <tr>
+              <td>Afternoon</td>
+              <td>naptime</td>
+            </tr>
+            <tr>
+              <td>Evening</td>
+              <td>Playtime</td>
+            </tr>
+            <tr>
+              <td>Nighttime</td>
+              <td>Sleepy time</td>
+            </tr>
+        </table>
+      </section>
     </section>
+    <div>
+      <h2 id="tech_skills">Technical Skills </h2>
+      <hr>
+      <section>
+        <h3 id="fav_code">Some of my favorite code snippets </h3>
+        <code>
+          import <span style="color:blue">numpy</span> as
+          <span style="color:red">np</span>
+        </code>
+        <p> this is my most used code snippet </p>
+        <p> In HTML we can use the pre tag to show preformatted text </p>
+        <pre> like
+          this
+        </pre>
+        <p> You can also make a canvas element that can be interacted with
+          through javascript
+        </p>
+        <canvas id="exampleCanvas" width="200" height="100" style="border:1px solid #000000">HI</canvas>
+        <p> Likewise, we can also display svg's </p>
+        <svg width="200" height="200">
+          <rect x="50" y="50" rx="50" width="100" height="100" style="fill:red"/>
+        </svg>
+        <p> and video files too </p>
+        <video style="width:auto;" controls>
+          <source src="./video/sample-mp4-file.mp4" type="video/mp4">
+        </video>
+        <details>
+          <summary>Big Chungus</summary>
+          <p>Big Chungus is a fat rabbit that's just a big fluff ball</p>
+        </details>
+        <br><br>
+      </section>
+    </div>
   </main>
   <footer>
     A foot
   </footer>
+</html>
