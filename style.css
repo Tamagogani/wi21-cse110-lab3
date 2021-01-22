@@ -21,6 +21,66 @@
   --color5: hsla(345, 99%, 20%, 0.5);
 }
 
+.ry-border {
+  border-color:var(--yellow);
+  border-width:10px;
+  border-style:solid;
+  border-radius:10%;
+}
+.y-circle {
+  border-color:var(--yellow);
+  border-width:8px;
+  border-style: groove;
+  border-radius: 50%;
+}
+
+.grid-gallery{
+  display:grid;
+  width:90%;
+  background:var(--bg1);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 15vw;
+  grid-gap:2px;
+}
+.grid-im3{
+  grid-area:"im3";
+  background:var(--red);
+}
+.gallery-img{
+  object-fit: cover;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.grid-1{
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.grid-2{
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.grid-3{
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.flex-gallery{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction:row;
+  padding: 5px;
+}
+
+.flex-img{
+  flex-grow: 1;
+  max-width: 15vw;
+  object-fit: cover;
+  /* vertical-align: bottom; */
+}
+/* this is a comment */
 * {
   background-color: var(--bg0, black);
   font-family: Montserrat, monospace;
@@ -37,10 +97,22 @@ h1 {
 
 h2 {
   color:var(--orange);
+  text-decoration: underline;
+  display: block;
 }
 
 p {
-  font-size: 16px;
+  font-size: 3.5mm;
+  text-align: justify;
+}
+
+p ~ aside {
+  padding-left: 5em;
+  padding-right: 0px;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  color:var(--blue);
+  max-width: 80%
 }
 
 section  h2+h3 {
@@ -64,9 +136,56 @@ details > summary {
 }
 
 [type='number'], [type="radio"] {
-  margin: 20px 10px 20px 10px;
+  margin: 20px 10pt 1ex .5rem;
 }
 
 .dcolor-link:hover{
   color:var(--yellow);
+}
+
+.dcolor-link:active{
+  color:var(--cyan);
+}
+
+.dsize {
+  height: auto;
+  width: 75%;
+}
+
+.spos {
+  position:-webkit-sticky;
+  position:sticky;
+  top:50px;
+}
+
+.statpos {
+
+  position:static;
+
+}
+
+@media (max-width: 1000px) {
+  body {
+    background-color: white;
+  }
+  [type='number'] {
+    margin-left: 2vmax;
+    margin-right: 2vmax;
+    margin-top: 5vmax;
+    margin-bottom: 2vmax;
+  }
+
+  p{
+    margin: auto;
+    display:none;
+  }
+
+  aside{
+    padding: 1em 1em 1em 5em;
+    color:var(--red);
+  }
+
+  #stubborn-shibe{
+    display:none;
+  }
 }
