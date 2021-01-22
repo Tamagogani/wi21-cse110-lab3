@@ -1,8 +1,72 @@
+:root {
+  --bg0: #272822;
+  --bg1: #3e3d32;
+  --bg2: #75715e;
+  --fg0: #f8f8f2;
+  --fg1: #cfcfc2;
+
+  --yellow: #e6db74;
+  --orange: #fd971f;
+  --red: #f92672;
+  --magenta: #fd5ff0;
+  --violet: #ae81ff;
+  --blue: #66d9ef;
+  --cyan: #a1efe4;
+  --green: #a6e22e;
+
+  --color1: rgb(0,0,0);
+  --color2: rgb(0,100,50,30);
+  --color3: #ABC;
+  --color4: hsl(200, 50%, 72%);
+  --color5: hsla(345, 99%, 20%, 0.5);
+}
+
+* {
+  background-color: var(--bg0, black);
+  font-family: Montserrat, monospace;
+  color: var(--fg0);
+}
+
 body {
   background-color: #ffffff;
 }
 
+h1 {
+  color:var(--green);
+}
+
+h2 {
+  color:var(--orange);
+}
+
 p {
   font-size: 16px;
-  font-family: Montserrat, monospace;
+}
+
+section  h2+h3 {
+  color:var(--red);
+}
+
+section h3 {
+  color:var(--magenta);
+}
+
+details > summary {
+  color:var(--violet);
+}
+
+.yellow-color {
+  color:var(--yellow);
+}
+
+#submit_button {
+  color:var(--green);
+}
+
+[type='number'], [type="radio"] {
+  margin: 20px 10px 20px 10px;
+}
+
+.dcolor-link:hover{
+  color:var(--yellow);
 }
